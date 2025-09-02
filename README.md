@@ -78,7 +78,6 @@ python -m src.utils.coletadados
 
 O arquivo será salvo em src/data/.
 
-
 🔧 Tecnologias Utilizadas
 
 Linguagem: Python 3
