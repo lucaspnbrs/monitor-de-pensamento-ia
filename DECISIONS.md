@@ -13,7 +13,7 @@ Transparência e Depuração (Explainability): O método é 100% transparente. S
 
 Baixo Custo Computacional: A análise por regras não exige poder computacional intensivo, tornando a aplicação leve, rápida e barata de hospedar.
 
-1.1. Alternativa Considerada (Não utilizada): Inicialmente, foi considerada a ideia de utilizar uma assistente via n8n para criar e analisar o sentimento das notícias. Embora essa abordagem oferecesse uma boa automação, optou-se pela solução interna (via regras) para manter a simplicidade da arquitetura e evitar uma dependência externa adicional no contexto deste projeto.
+ 1.1. Alternativa Considerada (Não utilizada): Inicialmente, foi considerada a ideia de utilizar uma assistente via n8n para criar e analisar o sentimento das notícias. Embora essa abordagem oferecesse uma boa automação, optou-se pela solução interna (via regras) para manter a simplicidade da arquitetura e evitar uma dependência externa adicional no contexto deste projeto.
 
 2. Tratamento de Erros e Falta de Notícias
 Pergunta: Como você lidou com possíveis erros ou falta de notícias no feed RSS?
