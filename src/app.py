@@ -119,5 +119,5 @@ with st.expander("📑 Ver detalhes das notícias"):
 
 st.caption("""
 ---
-⚠️ **Aviso de Limitação:** Esta análise de sentimento é baseada em regras simples e pode não capturar sarcasmo ou contextos complexos.
+🔍 **Interprete com Cuidado:** A análise de sentimento é um ponto de partida automatizado. Para conclusões aprofundadas, considere o contexto de cada notícia, pois o sistema pode não detectar nuances como sarcasmo e ironia.
 """)

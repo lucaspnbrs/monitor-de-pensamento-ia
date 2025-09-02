@@ -1,15 +1,13 @@
 import requests
 import pandas as pd
 import xml.etree.ElementTree as ET
-from utils.analise_sentimento import analisar_sentimento
+from analise_sentimento import analisar_sentimento
 import re
 
 def limpar_descricao(html_text):
     """Remove tags HTML da descrição para deixar o texto limpo."""
     try:
-        # Usa expressões regulares para encontrar e substituir as tags HTML por nada
         clean_text = re.sub(r'<.*?>', '', html_text)
-        # Remove a parte da fonte que geralmente vem no final
         clean_text = re.sub(r'&nbsp;&nbsp;.*', '', clean_text)
         return clean_text.strip()
     except:
