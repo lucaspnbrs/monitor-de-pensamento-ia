@@ -63,7 +63,7 @@ pip install -r requirements.txt
 4. Execute a aplicação Streamlit:
    
 ```bash
-streamlit run app.py
+streamlit run src/app.py
 ```
 Acesse http://localhost:8501 no seu navegador para ver o dashboard.
 
