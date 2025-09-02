@@ -50,16 +50,38 @@ else:
     st.success(f"✅ {len(df_filtrado)} notícias encontradas!")
 
 
-st.markdown("## 📈 Métricas Gerais")
-col_kpi1, col_kpi2, col_kpi3 = st.columns(3)
+if sentimento == "Todos":
+    st.markdown("## 📈 Métricas Gerais (Visão Completa)")
+    col_kpi1, col_kpi2, col_kpi3, col_kpi4 = st.columns(4)  
 
-total_noticias = df_filtrado.shape[0]
-perc_positivo = (df_filtrado[df_filtrado['sentimento'] == 'Positivo'].shape[0] / total_noticias * 100) if total_noticias > 0 else 0
-perc_negativo = (df_filtrado[df_filtrado['sentimento'] == 'Negativo'].shape[0] / total_noticias * 100) if total_noticias > 0 else 0
+    total_geral = df.shape[0]
+    positivas_total = df[df['sentimento'] == 'Positivo'].shape[0]
+    negativas_total = df[df['sentimento'] == 'Negativo'].shape[0]
+    neutras_total = df[df['sentimento'] == 'Neutro'].shape[0]
 
-col_kpi1.metric(label="📰 Total de Notícias", value=f"{total_noticias}")
-col_kpi2.metric(label="👍 Positivas", value=f"{perc_positivo:.1f}%")
-col_kpi3.metric(label="👎 Negativas", value=f"{perc_negativo:.1f}%")
+    perc_positivo = (positivas_total / total_geral * 100) if total_geral > 0 else 0
+    perc_negativo = (negativas_total / total_geral * 100) if total_geral > 0 else 0
+    perc_neutro = (neutras_total / total_geral * 100) if total_geral > 0 else 0
+
+    col_kpi1.metric(label="📰 Total de Notícias", value=f"{total_geral}")
+    col_kpi2.metric(label="👍 Positivas", value=f"{perc_positivo:.1f}%")
+    col_kpi3.metric(label="👎 Negativas", value=f"{perc_negativo:.1f}%")
+    col_kpi4.metric(label="😐 Neutras", value=f"{perc_neutro:.1f}%")
+else:
+    st.markdown(f"## 📈 Métricas para: {sentimento}")
+    total_filtrado = df_filtrado.shape[0]
+    total_geral = df.shape[0]
+    percentual_do_total = (total_filtrado / total_geral * 100) if total_geral > 0 else 0
+    
+    emoji_map = {"Positivo": "👍", "Negativo": "👎", "Neutro": "😐"}
+    label = f"{emoji_map.get(sentimento, '📰')} Notícias com sentimento {sentimento}"
+    
+    st.metric(
+        label=label, 
+        value=total_filtrado, 
+        delta=f"{percentual_do_total:.1f}% do total", 
+        delta_color="off"
+    )
 
 st.divider()
 

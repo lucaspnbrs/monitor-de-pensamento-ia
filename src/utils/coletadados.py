@@ -1,7 +1,8 @@
 import requests
 import pandas as pd
 import xml.etree.ElementTree as ET
-from analise_sentimento import analisar_sentimento
+""" from utils.analise_sentimento import analisar_sentimento """
+from .analise_sentimento import analisar_sentimento
 import re
 
 def limpar_descricao(html_text):

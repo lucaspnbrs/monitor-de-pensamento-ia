@@ -73,7 +73,7 @@ Acesse http://localhost:8501 no seu navegador para ver o dashboard.
 Conforme solicitado no case, o projeto pode gerar um arquivo noticias_processadas.csv. Para criá-lo, execute o script de coleta diretamente a partir da pasta raiz do projeto:
 
 ```bash
-python src/utils/coletadados.py
+python -m src.utils.coletadados
 ````
 
 O arquivo será salvo em src/data/.
