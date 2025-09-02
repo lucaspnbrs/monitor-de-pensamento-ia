@@ -29,10 +29,6 @@ Em conformidade com o princípio de transparência, este projeto utilizou um mod
 
 Refatoração e Melhoria de Código: Sugestão de melhorias em trechos de código existentes.
 
-Debugging: Auxílio no diagnóstico e solução de erros como o ModuleNotFoundError.
-
 Geração de Documentação: Geração das versões iniciais do README.md e da estrutura deste próprio documento, o DECISIONS.md, que foram então revisados e ajustados.
-
-Melhoria de Textos (Copywriting): Refinamento de textos e avisos exibidos no dashboard.
 
 Toda a lógica central do projeto foi concebida e executada pelo desenvolvedor. A IA atuou como uma ferramenta de produtividade.
