@@ -21,6 +21,7 @@ Tabela de Detalhes: Expansor que exibe a tabela completa com os dados coletados 
 
 O repositório está organizado da seguinte forma:
 
+```bash
 ├── src
 │   ├── utils
 │   │   ├── coletadados.py        # Módulo para coleta e processamento dos dados
@@ -29,35 +30,41 @@ O repositório está organizado da seguinte forma:
 ├── requirements.txt        # Lista de dependências do projeto
 └── README.md               # Este arquivo
 └── DECISIONS.md            # Documentação das decisões técnicas
-
+```
 
 🚀 Como Executar?
 
 Para executar este projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
-
+   
+```bash
 git clone [https://github.com/lucaspnbrs/monitor-de-pensamento-ia]
 cd seu-repositorio
+```
 
 
 2. Crie e ative um ambiente virtual (recomendado):
-
+   
+```bash
 python -m venv venv
 # Windows
 .\venv\Scripts\Activate
 # macOS/Linux
 source venv/bin/activate
-
+```
 
 3. Instale as dependências:
 
+```bash
 pip install -r requirements.txt
-
+```
 
 4. Execute a aplicação Streamlit:
-
+   
+```bash
 streamlit run app.py
+```
 Acesse http://localhost:8501 no seu navegador para ver o dashboard.
 
 
@@ -65,7 +72,10 @@ Acesse http://localhost:8501 no seu navegador para ver o dashboard.
 
 Conforme solicitado no case, o projeto pode gerar um arquivo noticias_processadas.csv. Para criá-lo, execute o script de coleta diretamente a partir da pasta raiz do projeto:
 
+```bash
 python src/utils/coletadados.py
+````
+
 O arquivo será salvo em src/data/.
 
 
